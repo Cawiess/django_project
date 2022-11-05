@@ -1,9 +1,51 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     My Blog
 {% endblock %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
+
 {% block content %}
-    <h1>Testing</h1>
+    <header id="main-navigation">
+        <h1><a href="">Carl's Blog</a></h1>
+        <nav>
+            <h1><a href="">All Posts</a></h1>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="{% static "blog/images/me.jpg" %}" alt="Carl - The Author Of This Blog" />
+            <h2>CARL'S BLOG</h2>
+        </header>
+        <p>Hi, Im Carl and I love making things in Python!</p>
+    </section>
+
+    <section>
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src=" {% static "blog/images/mountains.jpg" %}" alt="Some alt text here" />
+                        <div class="post__content">
+                            <h3>Title of this placeholder</h3>
+                            <p>This is a placeholder post which will be dynamically generated later on. It will be fetched from a database which will be so lovely.</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </u>
+    </section>
+
+    <section id="about">
+        <h2>Who I am</h2>
+        <p>I love programming and I like sunny weather. I like to explore learn new skills in python and other things as well.</p>
+        <p>My goal is to keep growing personally and professionally and I try to apply myself to do that every day.</p>
+    </section>
 {% endblock %}
