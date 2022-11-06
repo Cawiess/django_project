@@ -6,17 +6,11 @@
 {% endblock %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}" />
     <link rel="stylesheet" href="{% static "blog/index.css" %}" />
 {% endblock %}
 
 {% block content %}
-    <header id="main-navigation">
-        <h1><a href="">Carl's Blog</a></h1>
-        <nav>
-            <h1><a href="">All Posts</a></h1>
-        </nav>
-    </header>
-
     <section id="welcome">
         <header>
             <img src="{% static "blog/images/me.jpg" %}" alt="Carl - The Author Of This Blog" />
@@ -29,17 +23,8 @@
         <h2>My Latest Thoughts</h2>
 
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src=" {% static "blog/images/mountains.jpg" %}" alt="Some alt text here" />
-                        <div class="post__content">
-                            <h3>Title of this placeholder</h3>
-                            <p>This is a placeholder post which will be dynamically generated later on. It will be fetched from a database which will be so lovely.</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
         </u>
     </section>
 
